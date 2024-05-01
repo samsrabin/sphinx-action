@@ -1,6 +1,8 @@
 FROM escomp/base:latest
 
 RUN mkdir -p _build
+RUN pwd
+RUN ls -lh
 RUN --mount=type=bind,source=_build,target=/home/user/mounted_home/_build
 
 ADD entrypoint.py /entrypoint.py
